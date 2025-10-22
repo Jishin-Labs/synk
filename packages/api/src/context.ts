@@ -1,5 +1,5 @@
+import { auth } from "@synk/auth";
 import type { Context as HonoContext } from "hono";
-import { auth } from "@my-better-t-app/auth";
 
 export type CreateContextOptions = {
 	context: HonoContext;
