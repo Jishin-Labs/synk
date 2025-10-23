@@ -1,22 +1,36 @@
 {
 	"name": "@synk/api",
+	"type": "module",
+
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"default": "./src/index.ts"
+			"import": "./dist/index.js"
 		},
-		"./*": {
-			"types": "./dist/*.d.ts",
-			"default": "./src/*.ts"
+		"./context": {
+			"types": "./dist/context.d.ts",
+			"import": "./dist/context.js"
+		},
+		"./routers": {
+			"types": "./dist/routers/index.d.ts",
+			"import": "./dist/routers/index.js"
+		},
+		"./routers/*": {
+			"types": "./dist/routers/*.d.ts",
+			"import": "./dist/routers/*.js"
 		}
 	},
-	"type": "module",
+
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"sideEffects": false,
+
 	"scripts": {
 		"build": "tsdown"
 	},
-	"devDependencies": {
-		"tsdown": "catalog:"
-	},
+
 	"peerDependencies": {
 		"typescript": "^5"
 	},
@@ -29,5 +43,8 @@
 		"zod": "catalog:",
 		"@synk/auth": "workspace:*",
 		"@synk/db": "workspace:*"
+	},
+	"devDependencies": {
+		"tsdown": "catalog:"
 	}
 }
