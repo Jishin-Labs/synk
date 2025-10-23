@@ -9,10 +9,15 @@ import { logger } from "hono/logger";
 export const app = new Hono();
 
 app.use(logger());
+const allowlist = [
+	"https://synk-web-seven.vercel.app",
+	"http://localhost:3000",
+];
+
 app.use(
 	"/*",
 	cors({
-		origin: process.env.CORS_ORIGIN || "",
+		origin: (origin) => (origin && allowlist.includes(origin) ? origin : ""),
 		allowMethods: ["GET", "POST", "OPTIONS"],
 		allowHeaders: ["Content-Type", "Authorization"],
 		credentials: true,
