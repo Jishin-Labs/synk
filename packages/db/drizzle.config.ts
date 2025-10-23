@@ -1,9 +1,8 @@
-import dotenv from "dotenv";
 import { defineConfig } from "drizzle-kit";
 
-dotenv.config({
-	path: "../../apps/server/.env",
-});
+if (process.env.VERCEL !== "1") {
+	await import("dotenv/config");
+}
 
 export default defineConfig({
 	schema: "./src/schema",

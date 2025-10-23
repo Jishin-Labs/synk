@@ -1,6 +1,6 @@
 import { trpcServer } from "@hono/trpc-server";
 import { createContext } from "@synk/api/context";
-import { appRouter } from "@synk/api/routers"; // or "@synk/api/routers/index" if that's how you export
+import { appRouter } from "@synk/api/routers";
 import { auth } from "@synk/auth";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
