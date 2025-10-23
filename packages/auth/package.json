@@ -1,22 +1,28 @@
 {
 	"name": "@synk/auth",
+	"type": "module",
+
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"default": "./src/index.ts"
+			"import": "./dist/index.js"
 		},
 		"./*": {
 			"types": "./dist/*.d.ts",
-			"default": "./src/*.ts"
+			"import": "./dist/*.js"
 		}
 	},
-	"type": "module",
+
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"sideEffects": false,
+
 	"scripts": {
 		"build": "tsdown"
 	},
-	"devDependencies": {
-		"tsdown": "catalog:"
-	},
+
 	"peerDependencies": {
 		"typescript": "^5"
 	},
@@ -25,5 +31,8 @@
 		"dotenv": "catalog:",
 		"zod": "catalog:",
 		"@synk/db": "workspace:*"
+	},
+	"devDependencies": {
+		"tsdown": "catalog:"
 	}
 }
