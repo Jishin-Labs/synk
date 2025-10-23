@@ -30,3 +30,5 @@ app.use(
 );
 
 app.get("/", (c) => c.text("OK"));
+
+export default app;
