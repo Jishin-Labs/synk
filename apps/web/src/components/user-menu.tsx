@@ -1,4 +1,5 @@
-import Link from "next/link";
+"use client";
+
 import { useRouter } from "next/navigation";
 import {
 	DropdownMenu,
@@ -22,9 +23,17 @@ export default function UserMenu() {
 
 	if (!session) {
 		return (
-			<Button variant="outline" asChild>
-				<Link href="/login">Sign In</Link>
-			</Button>
+			<div className="hidden items-center gap-2 md:flex">
+				<Button
+					variant="ghost"
+					className="text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+				>
+					Sign in
+				</Button>
+				<Button className="bg-emerald-500 text-white shadow-emerald-500/25 shadow-xl hover:bg-emerald-400 dark:text-slate-500">
+					Get started
+				</Button>
+			</div>
 		);
 	}
 

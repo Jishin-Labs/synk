@@ -17,7 +17,7 @@
 
 - **Ledgerly** → Lightweight accounting & invoicing.  
   - ZAR + VAT support  
-  - PayFast & Stripe integration  
+  - PayFast integration  
   - Bank CSV import (FNB, Capitec, Standard Bank)
 
 Together they form a **connected workflow**:
