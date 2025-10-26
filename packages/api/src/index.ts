@@ -1,6 +1,9 @@
 import { initTRPC, TRPCError } from "@trpc/server";
 import type { Context } from "./context";
 
+export type { AppFileRouter } from "./uploadthing";
+export { appFileRouter } from "./uploadthing";
+
 export const t = initTRPC.context<Context>().create();
 
 export const router = t.router;

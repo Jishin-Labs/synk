@@ -30,7 +30,7 @@ export default function UserMenu() {
 				>
 					Sign in
 				</Button>
-				<Button className="bg-emerald-500 text-white shadow-emerald-500/25 shadow-xl hover:bg-emerald-400 dark:text-slate-500">
+				<Button className="bg-emerald-500 text-white shadow-emerald-500/25 shadow-xl hover:bg-emerald-400 dark:text-slate-900">
 					Get started
 				</Button>
 			</div>
