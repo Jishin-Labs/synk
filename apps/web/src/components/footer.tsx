@@ -22,7 +22,7 @@ export default function Footer() {
 							className="inline-flex cursor-pointer rounded-xl dark:hidden"
 						/>
 						<p className="mt-3 text-slate-600 dark:text-slate-400">
-							Back office for SA freelancers.
+							Your seamless back office solution.
 						</p>
 					</div>
 
